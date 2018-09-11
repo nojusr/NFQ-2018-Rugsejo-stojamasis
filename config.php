@@ -4,4 +4,5 @@
 	$dbuser = 'nfq';
 	$dbpass = '******';
 	$dbhost = 'localhost';
+	$pagelength = 30;
 ?>
