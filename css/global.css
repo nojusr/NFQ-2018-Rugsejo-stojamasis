@@ -1,0 +1,106 @@
+/*============FONTS============*/
+
+
+/*===========DESKTOP===========*/
+
+/*----GENERAL-ELEMENTS----*/
+
+html{
+}
+
+/*--------CLASSES---------*/
+.init{
+	background-color: #FFFFFF;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	text-align: center;
+	animation: fadeout 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards; 
+}
+
+.init-title {
+	position: fixed;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	animation: fadein 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards; 
+}
+
+.wrapper {
+	display: grid;
+	grid-gap: 5%;
+	width: 40%;
+	margin: auto;
+	margin-top: 40%;
+	opacity: 0;
+	animation: fadein 1s;
+	animation-delay: 4s;
+	animation-fill-mode: forwards; 
+}
+
+.left {
+	text-align: right;
+	grid-column: 1;
+}
+
+.seperator {
+	grid-column: 2;
+	background-color: #000000;
+	width: 1px;
+	max-height: 500px;
+	margin: auto;
+	animation: expand-vert 1s;
+	animation-delay: 5s;
+	animation-fill-mode: forwards; 
+}
+
+.right {
+	text-align: left;
+	grid-column: 3;
+	
+}
+
+
+/*----------ID'S----------*/
+
+/*===========TABLET============*/
+
+/*----GENERAL-ELEMENTS----*/
+/*--------CLASSES---------*/
+/*----------ID'S----------*/
+
+
+/*===========MOBILE============*/
+
+/*----GENERAL-ELEMENTS----*/
+/*--------CLASSES---------*/
+/*----------ID'S----------*/
+
+/*=========ANIMATIONS==========*/
+
+@keyframes fadeout {
+	from { opacity: 1; }
+	to   { opacity: 0; }
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+@keyframes expand-vert {
+	from { height: 0%; }
+	to   { height: 100%; }
+}
+
+@keyframes expand-horz {
+	from { width: 0%; }
+	to   { width: 100%; }
+}
