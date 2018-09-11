@@ -1,15 +1,45 @@
 /*============FONTS============*/
 
-
+@font-face {
+	font-family: main-regular;
+	src: url(WorkSans-Regular.ttf);
+	font-weight: 400;
+}
+@font-face {
+	font-family: main-bold;
+	src: url(WorkSans-Bold.ttf);
+	font-weight: bold;
+}
+@font-face {
+	font-family: main-light;
+	src: url(WorkSans-Light.ttf);
+	font-weight: 300;
+}
 /*===========DESKTOP===========*/
 
 /*----GENERAL-ELEMENTS----*/
 
-html{
+html {
+	background-image: url("background.svg");
+	background-size: 35px;
+	font-family: main-regular;
 }
-
+a {
+	color: #000000;
+}
+a:hover {
+	color: #555555;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url(dropdown.ico) right / 20px no-repeat #000;
+	padding-right: 20px;
+}
 /*--------CLASSES---------*/
-.init{
+
+.init {
 	background-color: #FFFFFF;
 	position: fixed;
 	width: 100%;
@@ -17,12 +47,13 @@ html{
 	left: 0;
 	top: 0;
 	text-align: center;
-	animation: fadeout 2s;
-	animation-delay: 2s;
-	animation-fill-mode: forwards; 
+	animation: fadeout 0.7s;
+	animation-delay: 2.5s;
+	animation-fill-mode: forwards;
 }
-
 .init-title {
+	background-color: #FFFFFF;
+	font-family: main-light;
 	position: fixed;
 	top: 45%;
 	left: 50%;
@@ -30,77 +61,114 @@ html{
 	opacity: 0;
 	animation: fadein 1s;
 	animation-delay: 0.5s;
-	animation-fill-mode: forwards; 
+	animation-fill-mode: forwards;
 }
-
 .wrapper {
+	align-items: center;
 	display: grid;
-	grid-gap: 5%;
-	width: 40%;
+	grid-template-columns: 6fr 1fr 6fr;
+	grid-gap: 20px;
+	position: fixed;
+	width: 90%;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
 	margin: auto;
-	margin-top: 40%;
+	margin-top: 5vw;
 	opacity: 0;
 	animation: fadein 1s;
-	animation-delay: 4s;
-	animation-fill-mode: forwards; 
+	animation-delay: 3.4s;
+	animation-fill-mode: forwards;
 }
-
 .left {
+	max-width: 500px;
+	justify-self: end;
 	text-align: right;
 	grid-column: 1;
 }
-
 .seperator {
 	grid-column: 2;
 	background-color: #000000;
 	width: 1px;
 	max-height: 500px;
 	margin: auto;
-	animation: expand-vert 1s;
-	animation-delay: 5s;
-	animation-fill-mode: forwards; 
+	animation: expand-vert 0.8s;
+	animation-delay: 3.2s;
+	animation-fill-mode: forwards;
 }
-
 .right {
+	max-width: 500px;
+	justify-self: start;
 	text-align: left;
 	grid-column: 3;
-	
 }
-
-
+.underline {
+	font-family: main-light;
+	text-decoration: underline;
+}
+.order-option {
+	float: right;
+	margin-left: 50px;
+	font-family: main-regular;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: none;
+	border-bottom: #000000 solid 1px;
+}
 /*----------ID'S----------*/
 
 /*===========TABLET============*/
 
-/*----GENERAL-ELEMENTS----*/
-/*--------CLASSES---------*/
-/*----------ID'S----------*/
-
-
+@media only screen and (max-width: 930px) {
+	/*----GENERAL-ELEMENTS----*/
+	
+	/*--------CLASSES---------*/
+	.order-option {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	/*----------ID'S----------*/
+}
 /*===========MOBILE============*/
 
 /*----GENERAL-ELEMENTS----*/
+
 /*--------CLASSES---------*/
+
 /*----------ID'S----------*/
 
 /*=========ANIMATIONS==========*/
 
 @keyframes fadeout {
-	from { opacity: 1; }
-	to   { opacity: 0; }
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
-
 @keyframes fadein {
-	from { opacity: 0; }
-	to   { opacity: 1; }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
-
 @keyframes expand-vert {
-	from { height: 0%; }
-	to   { height: 100%; }
+	from {
+		height: 0%;
+	}
+	to {
+		height: 100%;
+	}
 }
-
 @keyframes expand-horz {
-	from { width: 0%; }
-	to   { width: 100%; }
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
 }
