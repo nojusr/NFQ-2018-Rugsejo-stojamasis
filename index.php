@@ -1,45 +1,47 @@
 <html>
-	<?php
-		# prisijungimas prie duombazes
-		include 'config.php';
-		$conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
-	?>
 	
 	<head>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/global.css">
+		<?php 
+			if(isset($_GET['noinit'])) {
+				echo "<link rel='stylesheet' href='css/global_noanim.css'>";
+			}else{
+				echo "<link rel='stylesheet' href='css/global.css'>";
+			}
+		?>
 		<title>NR-Kompiuteriai</title>
 	</head>
 	<body>
 		<div class="init">
 			<h1 class="init-title">NR-Kompiuteriai</h1>
 		</div>
-		
+
 		<div class = "wrapper">
 			<div class="left">
-			<p>Sveiki atvykę i NR Kompiuterių svetainę. Mes statome kompiuterius iš geriausių įmanomų komponentų. Kiekviena dalis yra atsargiai parinkta, kad jums niekada nekiltų problemų su kompiuterio jėga bei stabilumu.</p>
+			<p>Sveiki atvykę i NR Kompiuterių svetainę. Mes statome kompiuterius iš geriausių įmanomų komponentų. Kiekviena dalis yra atsargiai parinkta ir patikrinta, kad jums niekada nekiltų problemų su kompiuterio jėga ar stabilumu.</p>
 			<p>Išsiuntus užsakymą mes susisieksime su jumis paštu. Jeigu norite specialaus užsakymo arba turite klausimų, galite kreiptis <a href="mailto::nojusr@gmail.com">į šį pašto adresą</a>.</p>
+			<a href="/orders.php">Užsakymai</a>
 			</div>
 			<div class="seperator"></div>
 			<div class="right">
-				<b>Užsakymai:</b>
-				<form class="order">
+				<b>Užsisakyti:</b>
+				<form class="order" action="place_order.php" method="post">
 					<p class="underline">Asmeninė informacija:</p>
-					<p>Vardas: <input class="order-option" type="text"></p>
-					<p>Pavardė: <input class="order-option" type="text"></p>
-					<p>E. Paštas: <input class="order-option" type="text"></p>
-					<p>Gyvenamoji vieta: <input class="order-option" type="text"></p>
+					<p>Vardas: <input class="order-option" name="name" type="text" required ></p>
+					<p>Pavardė: <input class="order-option" name="surname" type="text" required></p>
+					<p>E. Paštas: <input class="order-option" name="email" type="text" required></p>
+					<p>Adresas: <input class="order-option" name="addr" type="text" required></p>
 					<p class="underline">Užsakymo informacija:</p>
 					<p>
 						Spalva:
-						<select class="order-option" name="spalva">
+						<select class="order-option" name="color">
 							<option value="juoda">Juoda</option>
 							<option value="balta">Balta</option>
 						</select>
 					</p>
 					<p>
-						Operatyvinė atmintis (RAM):
+						Op. Atmintis (RAM):
 						<select class="order-option" name="ram">
 							<option value="16gb">16 GB</option>
 							<option value="32gb">32 GB</option>
