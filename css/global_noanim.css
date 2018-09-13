@@ -43,9 +43,6 @@ select {
 	display: none;
 }
 
-.init-title{
-	display: none;
-}
 .wrapper {
 	align-items: center;
 	display: grid;

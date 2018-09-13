@@ -34,30 +34,30 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1595"
-     inkscape:window-height="1044"
+     inkscape:window-width="659"
+     inkscape:window-height="410"
      id="namedview7"
      showgrid="false"
      inkscape:zoom="5.9"
      inkscape:cx="-7.0338983"
      inkscape:cy="20"
-     inkscape:window-x="2226"
-     inkscape:window-y="17"
+     inkscape:window-x="2643"
+     inkscape:window-y="334"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg5" />
   <g
      id="Page-1"
      fill="none"
      fill-rule="evenodd"
-     style="fill:#f2f2f2">
+     style="fill:#ececec">
     <g
        id="Artboard-5"
        fill="#000000"
-       style="fill:#f2f2f2">
+       style="fill:#ececec">
       <path
          id="Combined-Shape"
          d="M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z"
-         style="fill:#f2f2f2" />
+         style="fill:#ececec" />
     </g>
   </g>
 </svg>

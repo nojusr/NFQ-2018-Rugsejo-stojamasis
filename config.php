@@ -2,7 +2,7 @@
 	# duombazes konfiguracija.
 	$dbname = 'nfq';
 	$dbuser = 'nfq';
-	$dbpass = '*********';
+	$dbpass = 'caughtinalandslide';
 	$dbhost = 'localhost';
 	$pagelength = 30;
 ?>
