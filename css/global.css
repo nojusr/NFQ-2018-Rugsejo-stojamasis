@@ -46,6 +46,23 @@ input, select {
 	border-bottom: #000000 solid 1px;
 }
 
+table{
+	border-collapse: collapse;
+}
+
+thead{
+	font-family: main-regular;
+}
+
+th, td{
+	border: 1px solid #000000;
+	padding: 4px;
+}
+
+thead {
+	border-bottom: #000000 solid 3px;
+}
+
 /*--------CLASSES---------*/
 
 .init {
@@ -138,7 +155,7 @@ input, select {
 
 .order-wrapper {
 	width: 90%;
-	max-width: 800px;
+	max-width: 1000px;
 	margin: auto;
 	margin-top: 50px;
 	opacity: 0;
@@ -147,7 +164,7 @@ input, select {
 	animation-fill-mode: forwards;
 }
 
-.order-seperator{
+.order-seperator {
 	background-color: #000000;
 	margin: auto;
 	margin-top: 20px;
@@ -160,6 +177,43 @@ input, select {
 	animation-fill-mode: forwards;
 }
 
+.data-container{
+
+	width: 95%;
+	margin: auto;
+	overflow: auto;
+	overflow-y: hidden;
+	border-collapse: collapse;
+	border: 1px solid #000000;
+}
+
+.data {
+	width: 100%;
+	white-space: nowrap;
+}
+.data {
+	border-collapse: collapse;
+}
+.data td {
+	border: 1px solid #000000; 
+}
+.data tr:first-child td, .data tr:first-child th {
+	border-top: 0;
+}
+.data tr td:first-child {
+	border-left: 0;
+}
+.data tr:last-child td {
+	border-bottom: 0;
+}
+.data tr td:last-child {
+	border-right: 0;
+}
+
+
+
+
+
 /*----------ID'S----------*/
 
 /*===========MOBILE============*/
@@ -168,7 +222,7 @@ input, select {
 	/*----GENERAL-ELEMENTS----*/
 
 	/*--------CLASSES---------*/
-	.wrapper{
+	.wrapper {
 		width: 95%;
 		display: block;
 		position: static;
@@ -184,7 +238,7 @@ input, select {
 		max-width: 100%;
 		
 	}
-	.seperator{
+	.seperator {
 		margin-top: 20px;
 		margin-bottom: 20px;
 		width: 0px;
@@ -192,6 +246,10 @@ input, select {
 		animation: expand-horz 0.8s;
 		animation-delay: 3.4s;
 		animation-fill-mode: forwards;
+	}
+	
+	.search {
+		font-size: 0.9vw;
 	}
 	
 	/*----------ID'S----------*/

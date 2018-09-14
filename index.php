@@ -36,8 +36,8 @@
 					<p>
 						Spalva:
 						<select class="order-option" name="color">
-							<option value="juoda">Juoda</option>
-							<option value="balta">Balta</option>
+							<option value="Juoda">Juoda</option>
+							<option value="Balta">Balta</option>
 						</select>
 					</p>
 					<p>
