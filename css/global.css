@@ -35,16 +35,20 @@ select {
 	-moz-appearance: none;
 	appearance: none;
 	background: url(dropdown.ico) right / 20px no-repeat #000;
-	padding-right: 20px;
+	padding-right: 24px;
+	height: 27px;
 }
 
 input, select {
+	padding-top: 6px;
+	padding-bottom: 4px;
 	font-family: main-regular;
 	color: #000000;
 	background-color: #FFFFFF;
 	border: none;
 	border-bottom: #000000 solid 1px;
 }
+
 
 table{
 	border-collapse: collapse;
@@ -228,12 +232,15 @@ thead {
 		position: static;
 		margin: auto;
 		margin-top: 50px;
-		text-align: left;
 		transform: none;
 		padding-bottom: 30px;
 		
 		
 	}
+	.left{
+		text-align: left;
+	}
+	
 	.left, .seperator, .right{
 		max-width: 100%;
 		

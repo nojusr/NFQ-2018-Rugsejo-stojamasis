@@ -19,7 +19,7 @@
 
 		<div class = "wrapper">
 			<div class="left">
-			<p>Sveiki atvykę i NR Kompiuterių svetainę. Mes statome kompiuterius iš geriausių įmanomų komponentų. Kiekviena dalis yra atsargiai parinkta ir patikrinta, kad jums niekada nekiltų problemų su kompiuterio jėga ar stabilumu.</p>
+			<p>Sveiki atvykę i NR Kompiuterių svetainę. Mes kuriame kompiuterius iš geriausių įmanomų komponentų. Kiekviena dalis yra atsargiai parinkta ir patikrinta, kad jums niekada nekiltų problemų su kompiuterio jėga ar stabilumu.</p>
 			<p>Išsiuntus užsakymą mes susisieksime su jumis paštu. Jeigu norite specialaus užsakymo arba turite klausimų, galite kreiptis <a href="mailto::nojusr@gmail.com">į šį pašto adresą</a>.</p>
 			<a href="/orders.php">Užsakymai</a>
 			</div>

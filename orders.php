@@ -158,7 +158,7 @@
 			
 			# finish query assembly with correct paging
 			$p1 = 0;
-			if (isset $_GET['page']){
+			if (isset ($_GET['page'])) {
 				$p1 = $_GET['page']*$pagelength;
 			}
 			$query .="LIMIT ".$p1.",".$pagelength.";";
@@ -201,7 +201,7 @@
 				<?php
 					# page output
 					for ($i = 0; $i < $pageamount; $i++){
-						echo "<a href='orders.php?noinit=true&".http_build_query($_GET)."&page=".$i."'>".($i+1)."</a>";
+						echo "<a href='orders.php?noinit=true&".http_build_query($_GET)."&page=".$i."'>".($i+1)."</a> ";
 					}
 					
 					# sorting info
@@ -229,7 +229,7 @@
 								
 							?>
 							
-							<!--personally, i'm ashamed of this piece of code, but, for now, i have no clear way of improving it-->
+							<!--personally, i'm ashamed of this piece of code, but, right now, i don't know of a way it-->
 							<td><a href='/orders.php?noinit=true&<?php  echo http_build_query($_GET);?>&orderby=name<?php if (isset($da) && $da=='desc'){echo"&da=asc";}else{echo"&da=desc";}?>'>Vardas</a></td>
 							<td><a href='/orders.php?noinit=true&<?php  echo http_build_query($_GET);?>&orderby=surname<?php if (isset($da) && $da=='desc'){echo"&da=asc";}else{echo"&da=desc";}?>'>Pavardė</a></td>
 							<td><a href='/orders.php?noinit=true&<?php  echo http_build_query($_GET);?>&orderby=location<?php if (isset($da) && $da=='desc'){echo"&da=asc";}else{echo"&da=desc";}?>'>Gyvenvietė</a></td>
