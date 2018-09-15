@@ -48,6 +48,6 @@
 		$conn=null;
 		echo "Užsakymas išsiųstas";
 	}
-	header("Location: http://192.168.1.130:2015/?noinit=true");
+	header("Location: http://submission.kelp.ml/?noinit=true");
 	die();
 ?>

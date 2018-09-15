@@ -139,7 +139,7 @@
 				}
 			}
 			
-			# paging (TEST THIS)
+			# paging
 			
 			# execute query with no limit in order to get full length
 			$nolimit = $query.";";
@@ -171,7 +171,7 @@
 		
 		<div class="order-wrapper">
 			<form class="search">
-				<input name="squery" type="text" placeholder="Paieška..." <?php if(isset($_GET['squery'])) {echo "value='".$_GET['squery']."'";};?>>
+				<input name="squery" type="text" placeholder="Paieška..." <?php if(isset($_GET['squery'])) {echo "value='".htmlspecialchars($_GET['squery'], ENT_QUOTES, 'UTF-8')."'";};?>>
 				<select name="stype">
 					<?php
 						# this would've been much, MUCH cleaner if javascript was allowed
@@ -199,10 +199,25 @@
 				<a href="/">Atgal</a>
 				<p>Puslapiai:
 				<?php
-					# page output
-					for ($i = 0; $i < $pageamount; $i++){
-						echo "<a href='orders.php?noinit=true&".http_build_query($_GET)."&page=".$i."'>".($i+1)."</a> ";
+					#preserve current page
+					if (isset($_GET['page'])) { 
+						$page = $_GET['page'];
 					}
+					unset ($_GET['page']);
+				
+					# page output
+					if ($pageamount > 0){
+						for ($i = 0; $i < $pageamount; $i++){
+							if (isset($page) && $i == $page){
+								echo " ".($i+1)." ";
+							}else{
+								echo "<a href='orders.php?noinit=true&".http_build_query($_GET)."&page=".$i."'>".($i+1)."</a> ";
+							}
+						}
+					}
+					
+					
+					
 					
 					# sorting info
 					if (!isset($_GET['da']) && !isset($_GET['orderby'])){
@@ -229,7 +244,7 @@
 								
 							?>
 							
-							<!--personally, i'm ashamed of this piece of code, but, right now, i don't know of a way it-->
+							<!--personally, i'm ashamed of this piece of code, but, right now, i don't know of a way to improve it-->
 							<td><a href='/orders.php?noinit=true&<?php  echo http_build_query($_GET);?>&orderby=name<?php if (isset($da) && $da=='desc'){echo"&da=asc";}else{echo"&da=desc";}?>'>Vardas</a></td>
 							<td><a href='/orders.php?noinit=true&<?php  echo http_build_query($_GET);?>&orderby=surname<?php if (isset($da) && $da=='desc'){echo"&da=asc";}else{echo"&da=desc";}?>'>Pavardė</a></td>
 							<td><a href='/orders.php?noinit=true&<?php  echo http_build_query($_GET);?>&orderby=location<?php if (isset($da) && $da=='desc'){echo"&da=asc";}else{echo"&da=desc";}?>'>Gyvenvietė</a></td>
@@ -247,9 +262,7 @@
 					</thead>
 					<?php
 						
-						# finish query assembly and output into table
-						
-						
+						# output final query onto table
 						$stmt = $conn->prepare($query);
 						if (isset($_GET['squery'])){
 							$tmp = "%".$_GET['squery']."%";
@@ -280,16 +293,8 @@
 						$stmt=null;
 						$conn=null;
 					?>
-					
-					
 				</table>
 			</div>
-			
 		</div>
-		
-
 	</body>
-	
-	
-
 </html>
