@@ -2,17 +2,17 @@
 
 @font-face {
 	font-family: main-regular;
-	src: url(WorkSans-Regular.ttf);
+	src: url(RobotoCondensed-Regular.ttf);
 	font-weight: 400;
 }
 @font-face {
 	font-family: main-bold;
-	src: url(WorkSans-Bold.ttf);
+	src: url(RobotoCondensed-Bold.ttf);
 	font-weight: bold;
 }
 @font-face {
 	font-family: main-light;
-	src: url(WorkSans-Light.ttf);
+	src: url(RobotoCondensed-Light.ttf);
 	font-weight: 300;
 }
 /*===========DESKTOP===========*/

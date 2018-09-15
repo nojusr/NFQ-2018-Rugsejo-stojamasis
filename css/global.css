@@ -2,18 +2,15 @@
 
 @font-face {
 	font-family: main-regular;
-	src: url(WorkSans-Regular.ttf);
-	font-weight: 400;
+	src: url(RobotoCondensed-Regular.ttf);
 }
 @font-face {
 	font-family: main-bold;
-	src: url(WorkSans-Bold.ttf);
-	font-weight: bold;
+	src: url(RobotoCondensed-Bold.ttf);
 }
 @font-face {
 	font-family: main-light;
-	src: url(WorkSans-Light.ttf);
-	font-weight: 300;
+	src: url(RobotoCondensed-Light.ttf);
 }
 /*===========DESKTOP===========*/
 
@@ -140,6 +137,11 @@ thead {
 .order-option {
 	float: right;
 	margin-left: 50px;
+}
+
+.order p {
+
+	vertical-align: middle;
 }
 
 /*order page specific css*/
